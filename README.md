@@ -3,27 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Vince Hikes - Discover hiking, mountain adventures and scenic trails around Nanyuki, Kenya.">
-<title>Vince Hikes | Nanyuki Adventures</title>
+
+<meta name="description" content="Vince Hikes - Mountain trails, scenic viewpoints, nature walks, hiking adventures and outdoor experiences around Nanyuki, Kenya.">
+
+<title>Vince Hikes | Explore Nanyuki</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#f5f1e8;
-  color:#26351f;
+  font-family:Arial, sans-serif;
+  background:#f4f0e5;
+  color:#263728;
   line-height:1.6;
 }
 
+/* HEADER */
+
 header{
-  background:#1f3b24;
+  background:#173b24;
   color:white;
-  padding:18px 7%;
+  padding:16px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -44,98 +52,122 @@ nav a{
   font-size:14px;
 }
 
+nav a:hover{
+  color:#d9a84e;
+}
+
+/* HERO */
+
 .hero{
-  min-height:80vh;
+  min-height:88vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:60px 20px;
+  padding:50px 20px;
+
   background:
-    linear-gradient(rgba(20,45,25,.65),rgba(20,45,25,.65)),
-    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
+  linear-gradient(rgba(12,38,20,.62),rgba(12,38,20,.62)),
+  url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85");
+
   background-size:cover;
   background-position:center;
+
   color:white;
 }
 
 .hero-content{
-  max-width:800px;
+  max-width:850px;
 }
 
 .hero h1{
-  font-size:55px;
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.hero h2{
+  font-size:24px;
+  font-weight:normal;
   margin-bottom:15px;
+  color:#e2bd72;
 }
 
 .hero p{
-  font-size:19px;
+  font-size:18px;
   margin-bottom:28px;
 }
 
 .button{
   display:inline-block;
-  background:#d59b45;
+  background:#c99543;
   color:white;
+  text-decoration:none;
   padding:13px 25px;
   border-radius:30px;
-  text-decoration:none;
   font-weight:bold;
   margin:5px;
 }
 
 .button:hover{
-  background:#b87e2e;
+  background:#a9772e;
 }
+
+/* SECTIONS */
 
 section{
-  padding:65px 7%;
+  padding:70px 7%;
 }
 
-.title{
+.section-title{
   text-align:center;
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 
-.title h2{
-  font-size:32px;
-  color:#1f3b24;
+.section-title h2{
+  color:#173b24;
+  font-size:34px;
+  margin-bottom:8px;
 }
 
-.title p{
-  color:#687263;
+.section-title p{
+  color:#687266;
 }
 
-.cards{
+/* SERVICES */
+
+.services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:22px;
 }
 
-.card{
+.service{
   background:white;
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 5px 18px rgba(0,0,0,.1);
+  padding:28px 22px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  transition:.2s;
 }
 
-.card img{
-  width:100%;
-  height:210px;
-  object-fit:cover;
+.service:hover{
+  transform:translateY(-5px);
 }
 
-.card-content{
-  padding:20px;
+.icon{
+  font-size:40px;
+  margin-bottom:12px;
 }
 
-.card h3{
+.service h3{
+  color:#173b24;
   margin-bottom:8px;
-  color:#1f3b24;
 }
+
+/* ABOUT */
 
 .about{
-  background:#e5dfd0;
+  background:#e3ddcc;
 }
 
 .about-box{
@@ -144,61 +176,79 @@ section{
   text-align:center;
 }
 
+/* GALLERY */
+
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:12px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
 }
 
 .gallery img{
   width:100%;
-  height:220px;
+  height:230px;
   object-fit:cover;
-  border-radius:12px;
+  border-radius:14px;
 }
 
-.contact{
-  background:#1f3b24;
+/* CTA */
+
+.cta{
+  background:#173b24;
   color:white;
   text-align:center;
 }
 
-.contact h2{
-  font-size:34px;
-  margin-bottom:15px;
+.cta h2{
+  font-size:35px;
+  margin-bottom:12px;
 }
 
-.contact p{
+.cta p{
   margin-bottom:20px;
 }
 
+/* FOOTER */
+
 footer{
-  background:#142719;
-  color:#ccc;
+  background:#102719;
+  color:#c8cec9;
   text-align:center;
-  padding:22px;
+  padding:24px;
   font-size:14px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
   position:fixed;
   right:20px;
   bottom:20px;
-  background:#25D366;
-  color:white;
+
   width:58px;
   height:58px;
+
+  background:#25D366;
+  color:white;
+
   border-radius:50%;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   text-decoration:none;
   font-size:27px;
-  box-shadow:0 4px 12px rgba(0,0,0,.25);
+
+  box-shadow:0 5px 15px rgba(0,0,0,.3);
+
   z-index:2000;
 }
 
+/* MOBILE */
+
 @media(max-width:700px){
+
   header{
     flex-direction:column;
     gap:10px;
@@ -206,10 +256,15 @@ footer{
 
   nav a{
     margin:0 6px;
+    font-size:13px;
   }
 
   .hero h1{
-    font-size:40px;
+    font-size:42px;
+  }
+
+  .hero h2{
+    font-size:20px;
   }
 
   .hero p{
@@ -219,133 +274,266 @@ footer{
 </style>
 </head>
 
+
 <body>
 
+<!-- HEADER -->
+
 <header>
-  <div class="logo">🥾 Vince Hikes</div>
+
+  <div class="logo">
+    🥾 Vince Hikes
+  </div>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#hikes">Hikes</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#adventures">Adventures</a>
     <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero" id="home">
+
   <div class="hero-content">
-    <h1>Explore Nanyuki</h1>
+
+    <h1>VINCE HIKES</h1>
+
+    <h2>Explore. Hike. Discover.</h2>
+
     <p>
-      Discover trails, mountain views and unforgettable outdoor
-      adventures around Nanyuki, Kenya.
+      Discover mountain trails, scenic viewpoints,
+      nature walks and unforgettable outdoor experiences
+      around Nanyuki, Kenya.
     </p>
 
-    <a class="button" href="#hikes">Explore Hikes</a>
-    <a class="button" href="https://wa.me/254737315105">WhatsApp Me</a>
+    <a class="button" href="#adventures">
+      Explore Adventures
+    </a>
+
+    <a class="button" href="https://wa.me/254737315105">
+      WhatsApp Me
+    </a>
+
   </div>
+
 </section>
 
-<section id="hikes">
 
-  <div class="title">
+<!-- ADVENTURES -->
+
+<section id="adventures">
+
+  <div class="section-title">
+
     <h2>Adventure Awaits</h2>
-    <p>Experience the wild side of Nanyuki.</p>
-  </div>
 
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80">
-      <div class="card-content">
-        <h3>Hiking Adventures</h3>
-        <p>
-          Discover beautiful trails, peaceful landscapes and
-          exciting outdoor experiences.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=900&q=80">
-      <div class="card-content">
-        <h3>Mountain Experiences</h3>
-        <p>
-          Chase breathtaking views and challenge yourself
-          on Kenya's incredible mountain terrain.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=900&q=80">
-      <div class="card-content">
-        <h3>Scenic Trails</h3>
-        <p>
-          Find hidden viewpoints, beautiful landscapes and
-          memorable spots around Nanyuki.
-        </p>
-      </div>
-    </div>
+    <p>
+      Find your trail and experience the outdoors.
+    </p>
 
   </div>
+
+
+  <div class="services">
+
+
+    <div class="service">
+
+      <div class="icon">🥾</div>
+
+      <h3>Mountain Trails</h3>
+
+      <p>
+        Explore beautiful mountain routes,
+        challenging climbs and rewarding landscapes.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">🌄</div>
+
+      <h3>Scenic Viewpoints</h3>
+
+      <p>
+        Discover breathtaking viewpoints and
+        landscapes worth stopping for.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">🌿</div>
+
+      <h3>Nature Walks</h3>
+
+      <p>
+        Slow down, explore nature and enjoy
+        peaceful outdoor walks.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">⛰️</div>
+
+      <h3>Hiking Adventures</h3>
+
+      <p>
+        From relaxed hikes to challenging trails,
+        find an adventure that fits you.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">📸</div>
+
+      <h3>Scenic Photography</h3>
+
+      <p>
+        Find beautiful landscapes and viewpoints
+        for unforgettable outdoor shots.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">⛺</div>
+
+      <h3>Camping & Outdoors</h3>
+
+      <p>
+        Experience the outdoors through camping,
+        exploration and outdoor activities.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">🐾</div>
+
+      <h3>Nature & Wildlife Tracking</h3>
+
+      <p>
+        Explore natural environments and learn
+        about wildlife signs and tracks.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="icon">🧭</div>
+
+      <h3>Trail Exploration</h3>
+
+      <p>
+        Discover new routes, hidden spots and
+        interesting places around Nanyuki.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
   <div class="about-box">
-    <div class="title">
+
+    <div class="section-title">
+
       <h2>About Vince Hikes</h2>
+
     </div>
 
     <p>
-      Vince Hikes is about exploring the trails, landscapes and
-      outdoor adventures around Nanyuki, Kenya. From scenic walks
-      to challenging mountain experiences, the goal is simple:
-      get outside, explore and enjoy the journey.
+      Vince Hikes is an outdoor adventure project based around
+      Nanyuki, Kenya, focused on exploring trails, mountains,
+      scenic viewpoints and natural landscapes.
     </p>
 
     <br>
 
     <p>
-      Looking for a hiking adventure, a scenic spot or outdoor
-      experience? Get in touch and let's plan your next adventure.
+      Whether you're looking for a peaceful nature walk,
+      a challenging trail, a scenic viewpoint or a new place
+      to explore, the journey starts here.
     </p>
+
   </div>
 
 </section>
+
+
+<!-- GALLERY -->
 
 <section id="gallery">
 
-  <div class="title">
-    <h2>Trail Gallery</h2>
-    <p>Moments from the outdoors.</p>
+  <div class="section-title">
+
+    <h2>Explore The Outdoors</h2>
+
+    <p>
+      Mountains, trails and beautiful landscapes.
+    </p>
+
   </div>
+
 
   <div class="gallery">
 
-    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85">
 
-    <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=900&q=80">
+    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=85">
 
-    <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=900&q=80">
+    <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=85">
 
-    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80">
+    <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1000&q=85">
 
   </div>
 
 </section>
 
-<section class="contact" id="contact">
 
-  <h2>Ready for an Adventure?</h2>
+<!-- CONTACT -->
+
+<section class="cta" id="contact">
+
+  <h2>Plan Your Adventure</h2>
 
   <p>
-    For hiking, outdoor experiences, collaborations or advertising,
-    get in touch.
+    Want to explore a trail, discover a viewpoint
+    or plan an outdoor experience?
   </p>
 
-  <p><strong>📞 0737 315 105</strong></p>
+  <p>
+    <strong>📞 0737 315 105</strong>
+  </p>
 
   <a class="button" href="tel:+254737315105">
     Call Me
@@ -357,12 +545,25 @@ footer{
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
+
   © 2026 Vince Hikes • Nanyuki, Kenya
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/254737315105" aria-label="WhatsApp">
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/254737315105"
+  aria-label="WhatsApp Vince Hikes">
+
   ☎
+
 </a>
 
 </body>
